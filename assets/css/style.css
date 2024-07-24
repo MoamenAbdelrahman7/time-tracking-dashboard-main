@@ -36,9 +36,11 @@ footer{
 .container .items #info-card{
     display: flex;
     flex-direction: column;
+    /* gap: 30px; */
     grid-area: 1 / 1 / 3 / 2;
     background-color:hsl(235, 46%, 20%);
     border-radius: 14px;
+    justify-content: space-between;
 
 }
 .container .items #info-card .inner{
@@ -48,6 +50,7 @@ footer{
     padding: 30px 25px 40px;
     display: flex;
     flex-direction: column;
+    height: 70%;
 }
 .container .items #info-card .inner span{
     display: flex;
@@ -71,16 +74,14 @@ footer{
 }
 .container .items #info-card .outer{
     padding: 20px 25px 25px;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    
+    gap: 15px;    
 }
 .container .items #info-card .outer button{
     width: fit-content;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 15px;
     border: none;
     outline: none;
     background: none;
