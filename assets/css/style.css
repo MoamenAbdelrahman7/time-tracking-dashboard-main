@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+main{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color:hsl(226, 43%, 10%);
+}
+button:hover{
+    cursor: pointer;
+}
+footer{
+    background-color:hsl(226, 43%, 10%);
+    padding: 20px;
+    color: #fff;
+}
+
+.container{
+    width: 70%;
+    margin: 40px;
+    background-color:hsl(226, 43%, 10%);
+}
+.container .items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+}
+
+.container .items #info-card{
+    display: flex;
+    flex-direction: column;
+    grid-area: 1 / 1 / 3 / 2;
+    background-color:hsl(235, 46%, 20%);
+    border-radius: 14px;
+
+}
+.container .items #info-card .inner{
+    background-color:hsl(246, 80%, 60%);
+    color: #fff;
+    border-radius: 14px;
+    padding: 30px 25px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.container .items #info-card .inner span{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container .items #info-card .inner img{
+    width: 55px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+.container .items #info-card .inner span > p{
+    font-size: 12px;
+    color:hsl(236, 100%, 87%);
+}
+.container .items #info-card .inner span > h1{
+    font-weight: 300;
+    font-size: 24px;
+}
+.container .items #info-card .outer{
+    padding: 20px 25px 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+.container .items #info-card .outer button{
+    width: fit-content;
+    font-weight: 400;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+}
+
+/* weekly button is clicked by default */
+.container .items #info-card .outer button.selected,
+.container .items #info-card .outer button:hover {
+    color: #fff;
+}
+.container .items #info-card .outer button{
+    color: hsl(236, 100%, 87%);
+}
+
+
+
+/* item general style */
+.container .items .item:not(#info-card){
+    border-radius: 16px;
+    padding-top: 35px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.container .items .item > img{
+    width: 55px;
+    position: absolute;
+    top: -4px;
+    right: 8px;
+    z-index: -1;
+
+}
+.container .items .item .inner{
+    background-color:hsl(235, 46%, 20%);
+    padding: 18px 20px;
+    border-radius: 14px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.container .items .item.item:not(#info-card) .inner:hover{
+    background-color:hsl(235, 45%, 35%);
+    transition: all .3s;
+}
+.container .items .item:not(#info-card) .inner .total-hours{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container .items .item:not(#info-card) .inner .total-hours h1{
+    font-size: 40px;
+    font-weight: 300;
+}
+.container .items .item:not(#info-card) .inner .total-hours p{
+    font-size: 10px;
+    color: hsl(236, 100%, 87%);
+}
+.container .items .item:not(#info-card) .inner span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.container .items .item:not(#info-card) .inner span small{
+    font-size: 15px;
+    font-weight: 400;
+}
+.container .items .item:not(#info-card) .inner span img{
+    width: 100%;
+}
+.container .items .item:not(#info-card) .inner span button{
+    width: 13px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+
+
+/* Work Card */
+.container .items #work-card{
+    background-color: hsl(15, 100%, 70%);
+}
+/* Play Card */
+.container .items #play-card{
+    background-color:hsl(195, 74%, 62%);
+}
+/* Study Card */
+.container .items #study-card{
+    background-color:hsl(348, 100%, 68%);
+   
+}
+/* Excercies Card */
+.container .items #exercise-card{
+    background-color:hsl(145, 58%, 55%);
+    
+}
+/* Social Card */
+.container .items #social-card{
+    background-color:hsl(264, 64%, 52%);
+}
+/* Self Card */
+.container .items #self-care-card{
+    background-color:hsl(43, 84%, 65%);
+}
+
+
+/* Responsevness */
+
+/* tablet */
+@media screen and (max-width: 769px) {
+    .container{
+        width: 80%;
+    }
+    
+}
+
+/* mobile */
+
+@media screen and (max-width:426px) {
+    main{
+        height: auto;
+    }
+
+    .container{
+        width: 80%;
+    }
+    .container .items{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(7,auto);
+        grid-auto-flow: column;
+        /* gap: 20px; */
+    }
+    
+    .container .items #info-card{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .container .items #info-card .inner{
+        padding: 20px 25px;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+    }
+    .container .items #info-card .inner span{
+        width: max-content;
+    }
+    .container .items #info-card .inner span > h1{
+        font-size: 22px;
+    }
+    .container .items #info-card .outer{
+        /* padding: 20px 25px 25px; */
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .items #info-card .outer button{
+        font-size: 15px;
+    } 
+    
+    /* item general style */
+    .container .items .item:not(#info-card){
+        border-radius: 16px;
+        padding-top: 35px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .container .items .item:not(#info-card) .inner .total-hours{
+        flex-direction: row;
+        align-items: center;
+    }
+    .container .items .item:not(#info-card) .inner .total-hours p{
+        font-size: 13px;
+    }
+
+    .container .items .item .inner{
+        padding: 14px 20px;
+    }
+
+    .container .items .item:not(#info-card) .inner span{
+        padding: 7px 0;
+    }
+    .container .items .item:not(#info-card) .inner span small{
+        font-size: 18px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

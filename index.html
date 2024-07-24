@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="assets/image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="container">
+      <div class="items"> 
+        <div class="item" id="info-card">
+          <div class="inner">
+            <img src="assets/images/image-jeremy.png" alt="Jermey">
+           <span>
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+           </span>
+          </div>
+          <div class="outer">
+            <button type="button" id="daily">Daily</button>
+            <button type="button" id="weekly" class="selected">Weekly</button>
+            <button type="button" id="monthly">Monthly</button>
+          </div>
+        </div>
+        <div class="item activity-card" id="work-card">
+          <img src="assets/images/icon-work.svg" alt="Work icon">
+          <div class="inner">
+            <span><small>Work</small><button><img src="assets/images/icon-ellipsis.svg" alt="#"></button></span>
+            <span class="total-hours">
+              <h1>32hrs</h1>
+              <p>Last Week - 36hrs</p>
+            </span>
+          </div>
+        </div>
+        <div class="item activity-card" id="play-card">
+          <img src="assets/images/icon-play.svg" alt="Play icon">
+          <div class="inner">
+            <span><small>Play</small><button><img src="assets/images/icon-ellipsis.svg" alt="#"></button></span>
+            <span class="total-hours">
+              <h1>10hrs</h1>
+              <p>Last Week - 10hrs</p>
+            </span>
+          </div>
+        </div>
+        <div class="item activity-card" id="study-card">
+          <img src="assets/images/icon-study.svg" alt="Play icon">
+          <div class="inner">
+            <span><small>Study</small><button><img src="assets/images/icon-ellipsis.svg" alt="#"></button></span>
+            <span class="total-hours">
+              <h1>4hrs</h1>
+              <p>Last Week - 7hrs</p>
+            </span>
+          </div>
+        </div>
+        <div class="item activity-card" id="exercise-card">
+          <img src="assets/images/icon-exercise.svg" alt="Excercies icon">
+          <div class="inner">
+            <span><small>Exercise</small><button><img src="assets/images/icon-ellipsis.svg" alt="#"></button></span>
+            <span class="total-hours">
+              <h1>4hrs</h1>
+              <p>Last Week - 5hrs</p>
+            </span>
+          </div>
+        </div>
+        <div class="item activity-card" id="social-card">
+          <img src="assets/images/icon-social.svg" alt="Social icon">
+          <div class="inner">
+            <span><small>Social</small><button><img src="assets/images/icon-ellipsis.svg" alt="#"></button></span>
+            <span class="total-hours">
+              <h1>5hrs</h1>
+              <p>Last Week - 10hrs</p>
+            </span>
+          </div>
+        </div>
+        <div class="item activity-card" id="self-care-card">
+          <img src="assets/images/icon-self-care.svg" alt="Self Care icon">
+          <div class="inner">
+            <span><small>Self Care</small><button><img src="assets/images/icon-ellipsis.svg" alt="#"></button></span>
+            <span class="total-hours">
+              <h1>2hrs</h1>
+              <p>Last Week - 2hrs</p>
+            </span>
+          </div>
+        </div>
+ 
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Moamen Abdelrahman</a>.
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
