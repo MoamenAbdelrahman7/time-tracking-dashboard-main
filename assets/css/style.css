@@ -50,7 +50,7 @@ footer{
     padding: 30px 25px 40px;
     display: flex;
     flex-direction: column;
-    height: 70%;
+    height: 85%;
 }
 .container .items #info-card .inner span{
     display: flex;
